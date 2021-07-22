@@ -14,32 +14,33 @@ class vaccumPos {
     String moves2 = "URURD";
     String moves3 = "LR"; 
     String moves4 = "RUULLDRD"; 
+    String moves5 = null;
 
     System.out.println(isOriginalPos(moves)); //true
     System.out.println(isOriginalPos(moves2)); //false
     System.out.println(isOriginalPos(moves3)); //true
     System.out.println(isOriginalPos(moves4)); //true
+    System.out.println(isOriginalPos(moves5)); //false
   }
 
   public static boolean isOriginalPos(String moves){
     boolean originalPos = false;
     String moveOptions = "UDLR";
-    moves = moves.toUpperCase().replaceAll("[^UDLR]", "");
-    
     if(moves == null)
       return originalPos;
     if(moves.equals(moveOptions))
       return true;
 
+    // remove invalid move chars
+    moves = moves.toUpperCase().replaceAll("[^UDLR]", "");
     int[] countMoves = {0,0,0,0};
     //iterate through move options to count occurences of moves in moves string
-    for(int i = 0; i < moveOptions.length(); ++i){
-      for(int j = 0; j < moves.length(); ++j){
-        //count moves
+    for(int i = 0; i < moveOptions.length(); ++i)
+      for(int j = 0; j < moves.length(); ++j)
         if(moveOptions.charAt(i) == moves.charAt(j))
           countMoves[i]++;
-      }
-    }
+      
+    
     //if diference of count within set of opposite moves = 0 than back to same spot 
     if((countMoves[0] - countMoves[1]) - (countMoves[2] - countMoves[3]) == 0 )
       originalPos = true;

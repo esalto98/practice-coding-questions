@@ -1,5 +1,3 @@
-package dailyByte;
-
 class palindrome {
     public static void main(String[] args){
         String test = "ci vic"; //true
@@ -13,22 +11,23 @@ class palindrome {
         System.out.println(isPalindrome(test4));
     }
 
-    public static boolean isPalindrome(String str){
-        if(str == null)
+    public static boolean isPalindrome(String str) {
+        if (str == null || str.length() == 0) {
             return false;
-        if(str.length() <= 1)
-            return true;
-
-        boolean isPalindrome = false;
-        //remove spaces 
+        }
+        
         str = str.replaceAll("[^a-zA-Z]", "").toLowerCase();
-        StringBuilder test = new StringBuilder(str);
-        //compare reversed string to orginal string 
-        if(test.reverse().toString().equals(str))
-            isPalindrome = true;
-       
-        return isPalindrome;
 
+        int i = 0;
+        int j = str.length() - 1;
+        while (i < j) {
+            if (str.charAt(i) != str.charAt(j)) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
     }
-
 }
+        

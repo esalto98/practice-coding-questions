@@ -5,12 +5,11 @@ class reverseString {
         String test2 = null;
         String test3 = "hello world";
         String palindrome = "civic";
+        
         System.out.println(reverseStr(test));
         System.out.println(reverseStr(test2));
         System.out.println(reverseStr(test3));
         System.out.println(reverseStr(palindrome));
-
-
     }
 
     public static String reverseStr(String str) {

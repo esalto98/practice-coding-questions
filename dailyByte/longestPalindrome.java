@@ -17,10 +17,10 @@ i
 */
 public class longestPalindrome {
     public static void main(String[] args) {
-        String palindrome1 = "racecar"; 
+        //String palindrome1 = "racecar"; 
         String palindrome2 = "annannaracecar";
-        String palindrome3 = "abcderacecar";
-        String palindrome4 = "levelracecar";
+       // String palindrome3 = "abcderacecar";
+       // String palindrome4 = "levelracecar";
 
         System.out.println(solution(palindrome2));
 

@@ -2,6 +2,7 @@
     "java.project.sourcePaths": [
         "pramp",
         "dailyByte",
-        "leetCode"
+        "LeetCode"
+        
     ]
 }

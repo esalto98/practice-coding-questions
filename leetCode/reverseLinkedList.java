@@ -1,6 +1,6 @@
 //Given the head of a singly linked list, reverse the list, and return the reversed list.
-/**
- * class ListNode {
+
+  class ListNode {
     int val;
     ListNode next;
 
@@ -16,8 +16,8 @@
         this.next = next;
     }
 }
- * 
- */
+ 
+
 public class reverseLinkedList{
     
      

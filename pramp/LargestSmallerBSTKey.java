@@ -27,12 +27,11 @@ public class LargestSmallerBSTKey {
             // your code goes here
             int smallest = -1;
             while (root != null) {
-                if (num < root.key) {
-                    root = root.left;
-                    smallest = root.key;
-                } else {
+                if (num > root.key) {
                     smallest = root.key;
                     root = root.right;
+                } else {
+                    root = root.left;
                 }
             }
             return smallest;
@@ -85,14 +84,14 @@ public class LargestSmallerBSTKey {
         // Create a Binary Search Tree
         BinarySearchTree bst = new BinarySearchTree();
         bst.insert(20);
-        bst.insert(9);
-        bst.insert(25);
-        bst.insert(5);
-        bst.insert(12);
-        bst.insert(11);
-        bst.insert(14);
+        bst.insert(30);
+        // bst.insert(25);
+        // bst.insert(5);
+        // bst.insert(12);
+        // bst.insert(11);
+        // bst.insert(14);
 
-        int result = bst.findLargestSmallerKey(17);
+        int result = bst.findLargestSmallerKey(26);
         System.out.println("Largest smaller number is " + result);
 
     }
